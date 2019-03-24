@@ -1,0 +1,15 @@
+{
+  "name": "kgkm-power-switcher",
+  "version": "1.0.0",
+  "description": "Ka Göd Ka Musi - Security 2Go Blockchain Streaming Money Power Switcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "util": "^0.11.1"
+  }
+}

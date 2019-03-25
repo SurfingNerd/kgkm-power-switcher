@@ -21,11 +21,12 @@ sw.onStreemsStopped = () => {
   powerSwitcher.powerOff(config.powerPort);
 };
 
-console.log('popping up Server on Port ' + config.webServer.port + ' for debug purpose');
-http.createServer(async function (req, res) {
-  console.log('http request: ' + req.url);
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('streamIsOnline: ' + (sw.numberOpenStreems > 0));
+console.log(`popping up Server on Port ${config.webServer.port} for debug purpose`);
+http.createServer(async (req, res) => {
+  console.log(`http request: ${req.url}`);
+  const streamIsOnline = sw.numberOpenStreems > 0;
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end(`streamIsOnline: ${streamIsOnline}`);
 
   if (req.url.endsWith('/off')) {
     console.log('switching off power');

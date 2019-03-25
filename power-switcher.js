@@ -2,25 +2,29 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 
-function sleep(ms){
-  return new Promise(resolve=>{
-    setTimeout(resolve,ms)
-  })
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 }
 
 async function powerOn(powerPort) {
-  const { stdout, stderr } = await exec('sispmctl -o ' + powerPort);
+  const { stdout, stderr } = await exec(`sispmctl -o ${powerPort}`);
 
   if (stderr.length > 0) {
-    console.log('Error powering on:' + stderr);
+    console.log(`Error powering on: ${stderr}`);
+  } else {
+    console.log(stdout);
   }
 }
 
 async function powerOff(powerPort) {
-  const { stdout, stderr } = await exec('sispmctl -f ' + powerPort);
+  const { stdout, stderr } = await exec(`sispmctl -f ${powerPort}`);
 
   if (stderr.length > 0) {
-    console.log('Error powering off:' + stderr);
+    console.log(`Error powering off ${stderr}`);
+  } else {
+    console.log(stdout);
   }
 }
 

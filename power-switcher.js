@@ -17,7 +17,7 @@ async function powerOn(powerPort) {
 }
 
 async function powerOff(powerPort) {
-  const { stdout, stderr } = await exec('sispmctl -f 1');
+  const { stdout, stderr } = await exec('sispmctl -f ' + powerPort);
 
   if (stderr.length > 0) {
     console.log('Error powering off:' + stderr);

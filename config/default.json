@@ -1,0 +1,18 @@
+{
+  "network": {
+    "rpcUrl": "ws://ws.tau1.artis.network"
+  },
+  "contract": {
+    "abiPath": "src_blockchain_BasicStreems_abi.json",
+    "address": "0xae9142261DB90c35cd0Df253abc4F53136bc80d5"
+  },
+  "receiver": "",
+  "eventNames": {
+    "streemOpened": "StreemOpened",
+    "streemClosed": "StreemClosed"
+  },
+  "webServer": {
+    "port": 56378
+  },
+  "powerPort": 1
+}

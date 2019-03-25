@@ -4,9 +4,9 @@
   },
   "contract": {
     "abiPath": "src_blockchain_BasicStreems_abi.json",
-    "address": "0xae9142261DB90c35cd0Df253abc4F53136bc80d5"
+    "address": "0xF6eF10E21166cf2e33DB070AFfe262F90365e8D4"
   },
-  "receiver": "",
+  "receiver": "0x01019E15b7bEEf611Ac4659e7acDc272C4D90AfA",
   "eventNames": {
     "streemOpened": "StreemOpened",
     "streemClosed": "StreemClosed"

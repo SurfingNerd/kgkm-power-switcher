@@ -1,0 +1,18 @@
+{
+  "network": {
+    "rpcUrl": "wss://ws.sigma1.artis.network"
+  },
+  "contract": {
+    "abiPath": "src_blockchain_BasicStreems_abi.json",
+    "address": "0xE53BA69C94b657838B2b22B9BC609163cC34512f"
+  },
+  "receiver": "0x01019E15b7bEEf611Ac4659e7acDc272C4D90AfA",
+  "eventNames": {
+    "streemOpened": "StreemOpened",
+    "streemClosed": "StreemClosed"
+  },
+  "webServer": {
+    "port": 56378
+  },
+  "powerPort": 1
+}
